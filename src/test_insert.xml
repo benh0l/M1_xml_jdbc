@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><INSERT>
+    <TABLE>equipe</TABLE>
+    <VALUES>
+        <VALUE>"AAA"</VALUE>
+        <VALUE>"Aaaaaa"</VALUE>
+        <VALUE>"Abricot"</VALUE>
+        <VALUE>"Ahmed Aaa"</VALUE>
+    </VALUES>
+    <VALUES>
+        <VALUE>"CCC"</VALUE>
+        <VALUE>"Ccccc"</VALUE>
+        <VALUE>"Cyan"</VALUE>
+        <VALUE>"Charles Charles"</VALUE>
+    </VALUES>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><SignatureMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>AU9uF/oLcH2HZ2F6xsJnEeTg6qWq5jrDLWuAtxBhQqE=</DigestValue></Reference></SignedInfo><SignatureValue>tMVuclDPyP5FETip5z+2Zo9B/sM/csCdLQbvKzWLkKo+gH3eYvH62o+MHHpgB7T91xZ8v/ouwvw=</SignatureValue><KeyInfo><KeyValue><DSAKeyValue><P>j3k12bmq6b+r7Yh6z0lRtvMuxZ47rzcY6OrElh8+/TYG50NRqcQYMzm4CefCrhxTm6dHW4XQEa24&#13;
+tHmHdUmEaVysDo8UszYIKKIv+icRCj1iqZNFNAmg/mlsRlj4S90ggZw3CaAQV7GVrc0AIz26VIS2&#13;
+KR+dZI74g0SGd5ec7AS0NKasLnXpmF3iPbApL8ERjJ/6nYGB5zONt5K3MNe540lZL2gJmHIVORXq&#13;
+PWuLRlPGM0WPgDsypMLg8nKQJW5OP4o7CDihxFDk4YwaKaN9316hQ95LZv8EkD7VzxYj4VjUh8YI&#13;
+6X8hHNgdyiPLbjgHZfgi40K+SEwFdjk5YBzWZw==</P><Q>uvaWpoV499/e5/pnyXfHhe8ysjO65YDAvNVpXQ==</Q><G>FqZcWCBIUHBOdQKjl1cEDTTaOjR4wVTU5KXALSQu4E+W5h5L0JBKvayPN+6x4J8xgtI8kEPLZC+I&#13;
+AEFg7fnKCbMgdqecMqYn8kc+kYebosTnRL0ggVRMtVuALDaNH6g+1InpTg+gaI4yQopceMR4xo0F&#13;
+J7ccmjq7CwvhLERoljnn08502xAaZaorh/ZMaCbbPscvS1WZg0u07bAvfJDppJbTpV1TW+v8RdT2&#13;
+GfY/Pe27hzklwvIk4HcxKW2oh+weR0j4fvtf3rdUhDFrIjLe5VPdrwIRKw0fAtowlzIk/ieu2oud&#13;
+Syki2bqL457Z4QOmPFKBC8aIt+LtQxbh7xfb3g==</G><Y>AtiCWy86ltbRmDov+EsxInp+dd2eUxb+D8Kb3mIpZ1gGCcmxtPJxeU5qijMlk2n3acpITjnTQ2F5&#13;
+P3Ouwg+vEo5g4ayhXM2gobzrwZYPQUB3yh/LhmI3br7IfwWu7TXetnSFRal/aH48xHWnPpHAtUgk&#13;
+kzNjzwkWNtMJ+kAAI/ZYP/0ZJE+Jweo80tmk9xNh2aiGxufuXCpUkruns1ZFTbdv3sRKsjD725cR&#13;
+QC0PeACXDG2oBlGHj7aErTdKF+bLEuzFZYNc0WsKXqVn9cd9VsJrouXdQw4dGaGIRZJzzdBDypHq&#13;
+4NH8pxy1Jd//hiOzzdZ3zrWkH1hoummE+qv5HQ==</Y></DSAKeyValue></KeyValue></KeyInfo></Signature></INSERT>

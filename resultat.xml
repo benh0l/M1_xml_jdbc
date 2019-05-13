@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><RESULTAT> 
+ <TUPLES> 
+        <TUPLE>
+            <codeEquipe>BBB</codeEquipe>
+            <pays>Birmanie</pays>
+            <couleur>Bleu</couleur>
+            <entraineur>Bernard Bianca</entraineur>
+        </TUPLE>
+        <TUPLE>
+            <codeEquipe>FRA</codeEquipe>
+            <pays>France</pays>
+            <couleur>Bleu</couleur>
+            <entraineur>Bernard Laporte</entraineur>
+        </TUPLE>
+        <TUPLE>
+            <codeEquipe>SAM</codeEquipe>
+            <pays>Samoa</pays>
+            <couleur>Bleu</couleur>
+            <entraineur>Michael Jones</entraineur>
+        </TUPLE>
+    </TUPLES>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><SignatureMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>wjEicqiGeeZh2GzoQmxye19PcH7gx0vpcEqP0PoHjEI=</DigestValue></Reference></SignedInfo><SignatureValue>WcKeMwI2e48i9zoG99B7GB5wIOPjSt5do9uYLw3JJ8JcuzKZeYYnAUWaZ2iTba5aQ1J31RXoMMY=</SignatureValue><KeyInfo><KeyValue><DSAKeyValue><P>j3k12bmq6b+r7Yh6z0lRtvMuxZ47rzcY6OrElh8+/TYG50NRqcQYMzm4CefCrhxTm6dHW4XQEa24&#13;
+tHmHdUmEaVysDo8UszYIKKIv+icRCj1iqZNFNAmg/mlsRlj4S90ggZw3CaAQV7GVrc0AIz26VIS2&#13;
+KR+dZI74g0SGd5ec7AS0NKasLnXpmF3iPbApL8ERjJ/6nYGB5zONt5K3MNe540lZL2gJmHIVORXq&#13;
+PWuLRlPGM0WPgDsypMLg8nKQJW5OP4o7CDihxFDk4YwaKaN9316hQ95LZv8EkD7VzxYj4VjUh8YI&#13;
+6X8hHNgdyiPLbjgHZfgi40K+SEwFdjk5YBzWZw==</P><Q>uvaWpoV499/e5/pnyXfHhe8ysjO65YDAvNVpXQ==</Q><G>FqZcWCBIUHBOdQKjl1cEDTTaOjR4wVTU5KXALSQu4E+W5h5L0JBKvayPN+6x4J8xgtI8kEPLZC+I&#13;
+AEFg7fnKCbMgdqecMqYn8kc+kYebosTnRL0ggVRMtVuALDaNH6g+1InpTg+gaI4yQopceMR4xo0F&#13;
+J7ccmjq7CwvhLERoljnn08502xAaZaorh/ZMaCbbPscvS1WZg0u07bAvfJDppJbTpV1TW+v8RdT2&#13;
+GfY/Pe27hzklwvIk4HcxKW2oh+weR0j4fvtf3rdUhDFrIjLe5VPdrwIRKw0fAtowlzIk/ieu2oud&#13;
+Syki2bqL457Z4QOmPFKBC8aIt+LtQxbh7xfb3g==</G><Y>Bo/Z/rw8462YC7Tkg6gb6XqWthZurXxSSwMJZIblzT8ZBUhMp9vICNiD7XwqO5rJ4b799xdd1b/d&#13;
+57kUwTyL72Ogquawq+/T9utGGYfdi3F0j3XQPJAc77Yx4SJcjgbW+jENIdPs3gc7GixxdSM/3PrZ&#13;
+vmWKtO/4zOEMdOjy3s9zERHpfXwMIi4OqojIZXB0PQg9ma1xdULE+yxWkz9UqSbXq92fKACGrTOQ&#13;
+R1SN0lcawqEDFPipQjYbfdPYul7YX1eg27OfH1Yo2JYWJG/B4I/8EDXmFx/t/54hf1cTYIVTfUGz&#13;
+ebYxtGKt7wtFCEzwRWXCs8Y6rEasmRZGN4cbeA==</Y></DSAKeyValue></KeyValue></KeyInfo></Signature></RESULTAT>

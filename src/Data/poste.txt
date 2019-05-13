@@ -1,0 +1,15 @@
+insert into poste values(1,'Premiere ligne - Pilier gauche');
+insert into poste values(2,'Premiere ligne - Talonneur');
+insert into poste values(3,'Premiere ligne - Pilier droit');
+insert into poste values(4,'Deuxieme ligne');
+insert into poste values(5,'Deuxieme ligne');
+insert into poste values(6,'Troisieme ligne - Gauche');
+insert into poste values(7,'Troisieme ligne - Droit');
+insert into poste values(8,'Troisieme ligne - Centre');
+insert into poste values(9,'Demi de melee');
+insert into poste values(10,'Demi d''ouverture');
+insert into poste values(11,'Trois-quarts aile gauche');
+insert into poste values(12,'Trois-quarts centre gauche');
+insert into poste values(13,'Trois-quarts centre droit');
+insert into poste values(14,'Trois-quarts aile droit');
+insert into poste values(15,'Arriere');

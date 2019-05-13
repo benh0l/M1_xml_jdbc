@@ -1,0 +1,10 @@
+insert into stade values(1,'Lens','Felix Bollaert',30000);
+insert into stade values(2,'Paris','Parc des Princes',60000);
+insert into stade values(3,'Saint-Denis','Stade de France',80000);
+insert into stade values(4,'Bordeaux','Chaban-Delmas',40000);
+insert into stade values(5,'Lyon','Gerland',40000);
+insert into stade values(6,'Marseille','Velodrome',50000);
+insert into stade values(7,'Montpellier','Mosson',35000);
+insert into stade values(8,'Nantes','Beaujoire',35000);
+insert into stade values(9,'Saint-Etienne','Geoffroy-Guichard',37000);
+insert into stade values(10,'Toulouse','Stadium',35000);

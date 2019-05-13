@@ -1,0 +1,12 @@
+insert into arbitre values(1,'Wayne Barnes','Angleterre');
+insert into arbitre values(2,'Stuart Dickinson','Australie');
+insert into arbitre values(3,'Paul Honiss','Nouvelle-Zelande');
+insert into arbitre values(4,'Marius Jonker' ,'Republique Sud-Africaine' );
+insert into arbitre values(5,'Joel Jutge' ,'France' );
+insert into arbitre values(6,'Jonathan Kaplan' ,'Republique Sud-Africaine' );
+insert into arbitre values(7,'Alan Lewis' ,'Irelande' );
+insert into arbitre values(8,'Nigel Owens' ,'Pays de Galles' );
+insert into arbitre values(9,'Alain Rolland' ,'Irelande' );
+insert into arbitre values(10,'Tony Spreadbury' ,'Angleterre' );
+insert into arbitre values(11,'Steve Walsh' ,'Nouvelle-Zelande' );
+insert into arbitre values(12,'Chris White' ,'Angleterre' );
