@@ -47,7 +47,7 @@ public class Main {
         maj.maj();
         */
 
-        JFrame frame = new JFrame("XML - Coupe du monde de Rugby");
+        JFrame frame = new JFrame("XML - Coupe du monde de Rugby - Benoît HOLZER");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JButton fichier = new JButton("Sélectionner un fichier xml");
@@ -98,8 +98,8 @@ public class Main {
                     Rechercher r = new Rechercher(status.getText());
                     try {
                         if(!statusRes.getText().equals("")){
-                            r.rechercher(frame,statusRes.getText());
-                            JOptionPane.showMessageDialog(frame,"Recherche effectuée avec succès\nFichier résultat enregistré :\n"+statusRes.getText(),"Succès",JOptionPane.INFORMATION_MESSAGE);
+                            r.rechercher(frame,statusRes.getText()+".xml");
+                            JOptionPane.showMessageDialog(frame,"Recherche effectuée avec succès\nFichier résultat enregistré :\n"+statusRes.getText()+".xml","Succès",JOptionPane.INFORMATION_MESSAGE);
                             status.setText("");
                             statusRes.setText("");
                         }else{
