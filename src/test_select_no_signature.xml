@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SELECT>
+    <CHAMPS>
+        <CHAMP>codeEquipe</CHAMP>
+        <CHAMP>pays</CHAMP>
+        <CHAMP>couleur</CHAMP>
+        <CHAMP>entraineur</CHAMP>
+    </CHAMPS>
+    <TABLES>
+        <TABLE>equipe</TABLE>
+    </TABLES>
+    <CONDITION>couleur LIKE "Bleu"</CONDITION>
+</SELECT>

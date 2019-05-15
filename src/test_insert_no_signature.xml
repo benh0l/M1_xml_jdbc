@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><INSERT>
+    <TABLE>equipe</TABLE>
+    <VALUES>
+        <VALUE>"AAA"</VALUE>
+        <VALUE>"Aaaaaa"</VALUE>
+        <VALUE>"Abricot"</VALUE>
+        <VALUE>"Ahmed Aaa"</VALUE>
+    </VALUES>
+    <VALUES>
+        <VALUE>"CCC"</VALUE>
+        <VALUE>"Ccccc"</VALUE>
+        <VALUE>"Cyan"</VALUE>
+        <VALUE>"Charles Charles"</VALUE>
+    </VALUES>
+</INSERT>

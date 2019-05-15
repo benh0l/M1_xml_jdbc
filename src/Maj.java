@@ -42,38 +42,41 @@ public class Maj {
 
                 if (!racine.getNodeName().equals("UPDATE")) {
                     System.out.println("Erreur pas racine =/= UPDATE");
-                }
+                    JOptionPane.showMessageDialog(frame,"Le noeud racine n'est pas <UPDATE>","Document non valide",JOptionPane.ERROR_MESSAGE);
+                }else {
 
-                // Etape 5 : récupération des champs
-                final NodeList racineNoeuds = racine.getChildNodes();
-                final int nbRacineNoeuds = racineNoeuds.getLength();
+                    // Etape 5 : récupération des champs
+                    final NodeList racineNoeuds = racine.getChildNodes();
+                    final int nbRacineNoeuds = racineNoeuds.getLength();
 
-                for (int i = 0; i < nbRacineNoeuds; i++) {
-                    if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                        Element element = (Element) racineNoeuds.item(i);
-                        String name = element.getNodeName();
-                        if (name.equals("TABLE")) {
-                            table = element.getTextContent();
-                        } else if (name.equals("CONDITION")) {
-                            condition = element.getTextContent();
-                        } else if (name.equals("CHAMP")) {
-                            champ = element.getTextContent();
-                        } else if (name.equals("VALUE")) {
-                            value = element.getTextContent();
+                    for (int i = 0; i < nbRacineNoeuds; i++) {
+                        if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                            Element element = (Element) racineNoeuds.item(i);
+                            String name = element.getNodeName();
+                            if (name.equals("TABLE")) {
+                                table = element.getTextContent();
+                            } else if (name.equals("CONDITION")) {
+                                condition = element.getTextContent();
+                            } else if (name.equals("CHAMP")) {
+                                champ = element.getTextContent();
+                            } else if (name.equals("VALUE")) {
+                                value = element.getTextContent();
+                            }
+
                         }
-
                     }
+
+                    String query = "UPDATE " + table + " SET " + champ + " = " + value;
+
+                    if (!condition.equals(""))
+                        query += " WHERE " + condition;
+
+                    System.out.println(query);
+
+                    Statement stmt = Main.con.createStatement();
+                    stmt.executeUpdate(query);
+                    JOptionPane.showMessageDialog(frame,"Mise à jour effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
                 }
-
-                String query = "UPDATE " + table+" SET "+champ+" = "+value;
-
-                if (!condition.equals(""))
-                    query += " WHERE " + condition;
-
-                System.out.println(query);
-
-                Statement stmt = Main.con.createStatement();
-                stmt.executeUpdate(query);
 
             } catch (ParserConfigurationException e) {
                 e.printStackTrace();

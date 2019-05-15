@@ -99,7 +99,7 @@ public class Main {
                     try {
                         if(!statusRes.getText().equals("")){
                             r.rechercher(frame,statusRes.getText()+".xml");
-                            JOptionPane.showMessageDialog(frame,"Recherche effectuée avec succès\nFichier résultat enregistré :\n"+statusRes.getText()+".xml","Succès",JOptionPane.INFORMATION_MESSAGE);
+                            //JOptionPane.showMessageDialog(frame,"Recherche effectuée avec succès\nFichier résultat enregistré :\n"+statusRes.getText()+".xml","Succès",JOptionPane.INFORMATION_MESSAGE);
                             status.setText("");
                             statusRes.setText("");
                         }else{
@@ -125,7 +125,7 @@ public class Main {
                     Inserer i = new Inserer(status.getText());
                     try {
                         i.inserer(frame);
-                        JOptionPane.showMessageDialog(frame,"Insertion effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
+                        //JOptionPane.showMessageDialog(frame,"Insertion effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
                         status.setText("");
                     } catch (Exception e1) {
                         e1.printStackTrace();
@@ -147,7 +147,7 @@ public class Main {
                     Effacer ef = new Effacer(status.getText());
                     try {
                         ef.effacer(frame);
-                        JOptionPane.showMessageDialog(frame,"Suppression effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
+                        //JOptionPane.showMessageDialog(frame,"Suppression effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
                         status.setText("");
                     } catch (Exception e1) {
                         e1.printStackTrace();
@@ -169,7 +169,7 @@ public class Main {
                     Maj m = new Maj(status.getText());
                     try {
                         m.maj(frame);
-                        JOptionPane.showMessageDialog(frame,"Mise à jour effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
+                        //JOptionPane.showMessageDialog(frame,"Mise à jour effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
                         status.setText("");
                     } catch (Exception e1) {
                         e1.printStackTrace();

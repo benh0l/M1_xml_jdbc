@@ -66,58 +66,60 @@ public class Rechercher {
 
                 if (!racine.getNodeName().equals("SELECT")) {
                     System.out.println("Erreur pas racine =/= SELECT");
-                }
+                    JOptionPane.showMessageDialog(frame,"Le noeud racine n'est pas <SELECT>","Document non valide",JOptionPane.ERROR_MESSAGE);
 
-                // Etape 5 : récupération des champs
-                final NodeList racineNoeuds = racine.getChildNodes();
-                final int nbRacineNoeuds = racineNoeuds.getLength();
+                }else {
 
-                for(int i = 0; i < nbRacineNoeuds; i++){
-                    if(racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE){
-                        Element element = (Element) racineNoeuds.item(i);
-                        String name = element.getNodeName();
-                        if(name.equals("CHAMPS")){
-                            NodeList nl = element.getChildNodes();
-                            for(int j = 0; j < nl.getLength(); j++){
-                                if(nl.item(j).getNodeType() == Node.ELEMENT_NODE){
-                                    Element champ = (Element) nl.item(j);
-                                    champs.add(champ.getTextContent());
+                    // Etape 5 : récupération des champs
+                    final NodeList racineNoeuds = racine.getChildNodes();
+                    final int nbRacineNoeuds = racineNoeuds.getLength();
+
+                    for (int i = 0; i < nbRacineNoeuds; i++) {
+                        if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                            Element element = (Element) racineNoeuds.item(i);
+                            String name = element.getNodeName();
+                            if (name.equals("CHAMPS")) {
+                                NodeList nl = element.getChildNodes();
+                                for (int j = 0; j < nl.getLength(); j++) {
+                                    if (nl.item(j).getNodeType() == Node.ELEMENT_NODE) {
+                                        Element champ = (Element) nl.item(j);
+                                        champs.add(champ.getTextContent());
+                                    }
                                 }
-                            }
-                        }else if(name.equals("TABLES")){
-                            NodeList nl = element.getChildNodes();
-                            for(int j = 0; j < nl.getLength(); j++){
-                                if(nl.item(j).getNodeType() == Node.ELEMENT_NODE){
-                                    Element table = (Element) nl.item(j);
-                                    tables.add(table.getTextContent());
+                            } else if (name.equals("TABLES")) {
+                                NodeList nl = element.getChildNodes();
+                                for (int j = 0; j < nl.getLength(); j++) {
+                                    if (nl.item(j).getNodeType() == Node.ELEMENT_NODE) {
+                                        Element table = (Element) nl.item(j);
+                                        tables.add(table.getTextContent());
+                                    }
                                 }
+                            } else if (name.equals("CONDITION")) {
+                                condition = element.getTextContent();
                             }
-                        }else if(name.equals("CONDITION")){
-                            condition = element.getTextContent();
+
                         }
-
                     }
-                }
 
-                String query = "SELECT ";
-                for(int ii = 0;ii < champs.size();ii++){
-                    query += champs.get(ii)+" ";
-                    if(ii != champs.size()-1)
-                        query += ", ";
-                }
-                query += "FROM ";
-                for(int ii = 0;ii < tables.size();ii++){
-                    query += tables.get(ii)+" ";
-                    if(ii != tables.size()-1)
-                        query += ", ";
-                }
-                if(!condition.equals(""))
-                    query += "WHERE "+condition;
+                    String query = "SELECT ";
+                    for (int ii = 0; ii < champs.size(); ii++) {
+                        query += champs.get(ii) + " ";
+                        if (ii != champs.size() - 1)
+                            query += ", ";
+                    }
+                    query += "FROM ";
+                    for (int ii = 0; ii < tables.size(); ii++) {
+                        query += tables.get(ii) + " ";
+                        if (ii != tables.size() - 1)
+                            query += ", ";
+                    }
+                    if (!condition.equals(""))
+                        query += "WHERE " + condition;
 
-                System.out.println(query);
+                    System.out.println(query);
 
-                Statement stmt = Main.con.createStatement();
-                ResultSet rs = stmt.executeQuery(query);
+                    Statement stmt = Main.con.createStatement();
+                    ResultSet rs = stmt.executeQuery(query);
 
             /*
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -131,19 +133,20 @@ public class Rechercher {
                 System.out.println("");
             }
             */
-                //System.out.println(genererXML(rs));
-                File xml = new File(urlRes);
-                FileWriter fileWriter = new FileWriter(xml);
-                try {
-                    fileWriter.write(genererXML(rs));
-                } catch (InvalidAlgorithmParameterException e) {
-                    e.printStackTrace();
-                } catch (NoSuchAlgorithmException e) {
-                    e.printStackTrace();
+                    //System.out.println(genererXML(rs));
+                    File xml = new File(urlRes);
+                    FileWriter fileWriter = new FileWriter(xml);
+                    try {
+                        fileWriter.write(genererXML(rs));
+                    } catch (InvalidAlgorithmParameterException e) {
+                        e.printStackTrace();
+                    } catch (NoSuchAlgorithmException e) {
+                        e.printStackTrace();
+                    }
+                    fileWriter.close();
+                    Signer.creerSignature(xml);
+                    JOptionPane.showMessageDialog(frame,"Recherche effectuée avec succès\nFichier résultat enregistré :\n"+urlRes+".xml","Succès",JOptionPane.INFORMATION_MESSAGE);
                 }
-                fileWriter.close();
-                Signer.creerSignature(xml);
-
             } catch (ParserConfigurationException e) {
                 e.printStackTrace();
             } catch (SAXException e) {

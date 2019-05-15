@@ -47,54 +47,57 @@ public class Inserer {
 
                 if (!racine.getNodeName().equals("INSERT")) {
                     System.out.println("Erreur pas racine =/= INSERT");
-                }
+                    JOptionPane.showMessageDialog(frame,"Le noeud racine n'est pas <INSERT>","Document non valide",JOptionPane.ERROR_MESSAGE);
+                }else {
 
-                // Etape 5 : récupération des champs
-                final NodeList racineNoeuds = racine.getChildNodes();
-                final int nbRacineNoeuds = racineNoeuds.getLength();
+                    // Etape 5 : récupération des champs
+                    final NodeList racineNoeuds = racine.getChildNodes();
+                    final int nbRacineNoeuds = racineNoeuds.getLength();
 
-                String query = "";
-                boolean first = true;
-                for(int i = 0; i < nbRacineNoeuds; i++){
-                    if(racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE){
-                        Element element = (Element) racineNoeuds.item(i);
-                        String name = element.getNodeName();
-                        if(name.equals("TABLE")){
-                            table = element.getTextContent();
-                            query = "INSERT INTO "+table+" ";
-                        }else if(name.equals("VALUES")){
-                            NodeList nl = element.getChildNodes();
+                    String query = "";
+                    boolean first = true;
+                    for (int i = 0; i < nbRacineNoeuds; i++) {
+                        if (racineNoeuds.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                            Element element = (Element) racineNoeuds.item(i);
+                            String name = element.getNodeName();
+                            if (name.equals("TABLE")) {
+                                table = element.getTextContent();
+                                query = "INSERT INTO " + table + " ";
+                            } else if (name.equals("VALUES")) {
+                                NodeList nl = element.getChildNodes();
 
-                            if(first) {
-                                query += "VALUES(";
-                                first = false;
-                            }else {
-                                query += ",(";
-                            }
-
-                            for(int j = 0; j < nl.getLength(); j++){
-                                if(nl.item(j).getNodeType() == Node.ELEMENT_NODE){
-                                    Element value = (Element) nl.item(j);
-                                    values.add(value.getTextContent());
+                                if (first) {
+                                    query += "VALUES(";
+                                    first = false;
+                                } else {
+                                    query += ",(";
                                 }
+
+                                for (int j = 0; j < nl.getLength(); j++) {
+                                    if (nl.item(j).getNodeType() == Node.ELEMENT_NODE) {
+                                        Element value = (Element) nl.item(j);
+                                        values.add(value.getTextContent());
+                                    }
+                                }
+                                for (int ii = 0; ii < values.size(); ii++) {
+                                    query += values.get(ii);
+                                    if (ii != values.size() - 1)
+                                        query += ", ";
+                                    else
+                                        query += ")";
+                                }
+                                values = new ArrayList<>();
                             }
-                            for(int ii = 0;ii < values.size();ii++){
-                                query += values.get(ii);
-                                if(ii != values.size()-1)
-                                    query += ", ";
-                                else
-                                    query +=")";
-                            }
-                            values = new ArrayList<>();
+
                         }
-
                     }
-                }
-                query += ";";
-                System.out.println(query);
+                    query += ";";
+                    System.out.println(query);
 
-                Statement stmt = Main.con.createStatement();
-                stmt.executeUpdate(query);
+                    Statement stmt = Main.con.createStatement();
+                    stmt.executeUpdate(query);
+                    JOptionPane.showMessageDialog(frame,"Insertion effectuée avec succès","Succès",JOptionPane.INFORMATION_MESSAGE);
+                }
 
             } catch (ParserConfigurationException e) {
                 e.printStackTrace();
